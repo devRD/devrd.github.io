@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import { Waterfall, Unna } from 'next/font/google'
 
@@ -12,6 +13,9 @@ const unna = Unna({
 export default function About() {
   return (
     <>
+      <Head>
+        <title>{`About Me`}</title>
+      </Head>
       <div className={`${styles.about} ${unna.className}`}>
         <div className="container">
           <div className="d-flex">
