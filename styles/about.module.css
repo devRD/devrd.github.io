@@ -1,0 +1,19 @@
+.about {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background: var(--about-bg);
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.aboutTitle {
+  font-weight: bold;
+}
+.aboutCard {
+  border: 1px solid var(--about-peach);
+  padding: 15px; 
+}
+
+
