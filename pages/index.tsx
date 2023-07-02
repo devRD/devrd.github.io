@@ -16,6 +16,9 @@ const unna = Unna({
   preload: true
 })
 
+const img_deploy = "website";
+const img_local = "";
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -55,14 +58,14 @@ export default function Home() {
         <Image
           alt="landing_flower"
           className={`d-none d-sm-block position-absolute img-fluid ${styles.flow}`}
-          src="./assets/flower.svg"
+          src={`./${img_deploy}/assets/flower.svg`}
           width="300"
           height="300"
         />
         <Image
           alt="landing_flower"
           className={`d-none d-sm-block position-absolute img-fluid ${styles.tflow}`}
-          src="./assets/tflow.svg"
+          src={`./${img_deploy}/assets/tflow.svg`}
           width="150"
           height="150"
         />
