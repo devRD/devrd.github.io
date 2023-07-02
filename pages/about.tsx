@@ -16,7 +16,8 @@ export default function About() {
         <div className="container">
           <div className="d-flex">
             <Image
-              src="/assets/flow.svg"
+              alt="about_flower"
+              src="./assets/flow.svg"
               width="40"
               height="40"
               className="img-fluid"

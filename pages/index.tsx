@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <a href="/">
+        <a href="/website">
           <div
             className={`${styles.logo} ${unna.className} fs-4 fw-bold`}
            >
@@ -53,14 +53,16 @@ export default function Home() {
           <p>What do I do?</p>
         </Link>
         <Image
+          alt="landing_flower"
           className={`d-none d-sm-block position-absolute img-fluid ${styles.flow}`}
-          src="/assets/flower.svg"
+          src="./assets/flower.svg"
           width="300"
           height="300"
         />
         <Image
+          alt="landing_flower"
           className={`d-none d-sm-block position-absolute img-fluid ${styles.tflow}`}
-          src="/assets/tflow.svg"
+          src="./assets/tflow.svg"
           width="150"
           height="150"
         />

@@ -35,13 +35,15 @@ export default function Index({ allPosts }: Props) {
         </div>
         <div className="">
           <Image
-            src="/assets/tflow.svg"
+            alt="Blog_assets"
+            src="./assets/tflow.svg"
             className={`${styles.tflowone} img-fluid`}
             width="200"
             height="200"
           />
           <Image
-            src="/assets/tflow.svg"
+            alt="Blog_assets"
+            src="./assets/tflow.svg"
             className={`${styles.tflowtwo} img-fluid`}
             width="200"
             height="200"
