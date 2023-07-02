@@ -35,7 +35,7 @@ const HeroPost = ({
     <>
       {/** Add Cover Image Hero as background **/}
       <div className={`${unna.className} position-relative ${styles.herocont}`}>
-        <CoverImage className="img-fluid" title={title} src={coverImage} slug={slug} />
+        <CoverImage title={title} src={coverImage} slug={slug} />
         <div className={`${styles.text} position-absolute`}>
           <h4 className={`mb-4 text-truncate ${styles.herotitle}`}>
             <Link
