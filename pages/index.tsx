@@ -17,7 +17,7 @@ const unna = Unna({
   preload: true
 })
 
-const img_deploy = "https://devrd.github.io/website"
+const img_deploy = "https://devrd.github.io/"
 //const img_local = ""
 
 export default function Home() {
@@ -60,6 +60,13 @@ export default function Home() {
             </h2>
             <p>What do I do?</p>
           </Link>
+          <Image
+            alt="landing_flower"
+            className={`d-block d-sm-none position-absolute img-fluid ${styles.mobileflow}`}
+            src={`${img_deploy}/assets/tflow.svg`}
+            width="250"
+            height="250"
+          />
           <Image
             alt="landing_flower"
             className={`d-none d-sm-block position-absolute img-fluid ${styles.flow}`}
