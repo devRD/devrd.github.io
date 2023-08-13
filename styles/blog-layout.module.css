@@ -6,13 +6,15 @@
   right: -20px;
   transform: rotate(180deg);
   z-index: -1;
+  filter: blur(1.2px);
 }
 
 .tflowtwo {
   position: absolute;
-  bottom: 0px;
-  left: -20px;
+  top: -100px;
+  left: -40px;
   z-index: -1;
+  filter: blur(1.2px);
 }
 
 .author {
@@ -32,4 +34,7 @@
 .herocont {
    width: 100%;
 }
-
+.hero {
+    position: relative;
+    left: -5%;
+}

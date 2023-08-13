@@ -4,6 +4,10 @@ const nextConfig = {
 
  // Add basePath
   basePath: '/website',
+  images: {
+    domains: ['localhost'],
+  },
+
 
 }
 

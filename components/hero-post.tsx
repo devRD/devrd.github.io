@@ -34,19 +34,23 @@ const HeroPost = ({
   return (
     <>
       {/** Add Cover Image Hero as background **/}
-      <div className={`${unna.className} position-relative ${styles.herocont}`}>
+      <div className={`${unna.className} ${styles.herocont}`}>
         <CoverImage title={title} src={coverImage} slug={slug} />
-        <div className={`${styles.text} position-absolute`}>
-          <h4 className={`mb-4 text-truncate ${styles.herotitle}`}>
+        <div className={`${styles.text}`}>
+          <h3 className="fs-4 mb-1 text-truncate">
             <Link
               as={`/posts/${slug}`}
               href="/posts/[slug]"
+              className="hover:underline"
             >
               {title}
             </Link>
-          </h4>
-          <DateFormatter dateString={date} />
-          <p className="mt-4 mb-4 text-truncate">{excerpt}</p>
+          </h3>
+          <div className="text-lg mb-4">
+            <DateFormatter dateString={date} />
+          </div>
+          <p className="mb-4">{excerpt}</p>
+          <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>
     </>

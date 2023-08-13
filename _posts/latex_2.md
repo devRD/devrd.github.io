@@ -1,13 +1,13 @@
 ---
-title: 'Preview Mode for Static Generation'
+title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/preview/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+coverImage: 'http://localhost:3000/website/assets/blog/latex_2/cover.png'
+date: '2023-08-13T15:21:32.163Z'
 author:
-  name: Ratnabali Dutta
+  name: devrd
   picture: '/assets/blog/authors/myAvatar.png'
 ogImage:
-  url: '/assets/blog/preview/cover.jpg'
+  url: 'http://localhost:3000/website/assets/blog/latex_2/cover.png'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

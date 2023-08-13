@@ -52,6 +52,7 @@ export default function Index({ allPosts }: Props) {
         <div className="container">
           {heroPost && (
             <HeroPost
+              style={styles.hero}
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.date}

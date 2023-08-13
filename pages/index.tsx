@@ -18,7 +18,6 @@ const unna = Unna({
 })
 
 const img_deploy = "https://devrd.github.io/"
-//const img_local = ""
 
 export default function Home() {
   return (
@@ -28,7 +27,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <a href="/website">
+          <a href="/">
             <div
               className={`${styles.logo} ${unna.className} fs-4 fw-bold`}
              >
