@@ -17,7 +17,7 @@ const PostBody = ({ content }: Props) => {
         img: (props) => (
           <Image
             src={props.src!}
-            alt={props.alt}
+            alt={props.alt!}
             width={props.width}
             height={props.height}
             className="p-2 position-relative"
