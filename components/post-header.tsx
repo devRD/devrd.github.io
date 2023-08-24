@@ -27,7 +27,6 @@ const PostHeader = ({ title, subtitle, coverImage, date, author }: Props) => {
     <>
       <div className="d-none">
         <PostTitle>{title}</PostTitle>
-        <Avatar name={author.name} picture={author.picture} />
       </div>
       <div className={`${unna.className}`}>
         <PostCover title={subtitle} src={coverImage} />
