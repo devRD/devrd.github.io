@@ -5,7 +5,7 @@ excerpt: 'This project focuses on improving mathtext by examining the
           known/reported issues within the existing framework, expanding
           support for new Math-LaTeX-based features, and incorporating
           robust testing to track down unobserved issues.' 
-coverImage: '/website/assets/blog/gsoc_fin/cover.png'
+coverImage: '/assets/blog/gsoc_fin/cover.png'
 date: '2023-08-24T12:35:23.768Z' 
 author:
   name: Ratnabali Dutta
