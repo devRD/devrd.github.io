@@ -16,7 +16,7 @@ const PostBody = ({ content }: Props) => {
       components={{
         img: (props) => (
           <Image
-            src={props.src}
+            src={props.src && props.src}
             alt={props.alt}
             width={props.width}
             height={props.height}
