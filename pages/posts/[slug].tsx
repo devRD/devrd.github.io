@@ -35,6 +35,7 @@ export default function Post({ post, morePosts, preview }: Props) {
             <article className="mb-3">
               <Head>
                 <meta property="og:image" content={post.ogImage.url} />
+                <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
               </Head>
               <PostHeader
                 title={post.title}
