@@ -4,6 +4,7 @@ import Container from '@components/container'
 import PostBody from '@components/post-body'
 import Header from '@components/header'
 import PostHeader from '@components/post-header'
+import PostFooter from '@components/post-footer'
 import Layout from '@components/layout'
 import { getPostBySlug, getAllPosts } from '@lib/api'
 import PostTitle from '@components/post-title'
@@ -31,11 +32,13 @@ export default function Post({ post, morePosts, preview }: Props) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="mb-3">
               <Head>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
               <PostHeader
+                title={post.title}
+                subtitle={post.subtitle}
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
@@ -58,6 +61,7 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     'title',
+    'subtitle',
     'date',
     'slug',
     'author',

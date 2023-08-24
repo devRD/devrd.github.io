@@ -33,7 +33,30 @@ const HeroPost = ({
 }: Props) => {
   return (
     <>
-      {/** Add Cover Image Hero as background **/}
+      <div className="row">
+        <div className="d-flex align-items-center col-12 col-sm-12 col-md-6 col-lg-6">
+          <CoverImage title={title} src={coverImage} slug={slug} />
+        </div>
+        <Link
+            as={`/posts/${slug}`}
+            href="/posts/[slug]"
+            className="d-flex align-items-end col-12 col-sm-12 col-md-6 col-lg-6"
+        >
+          <div className="pe-3">
+            <h5 className="fw-bold">{title}</h5>
+            <div
+               style={{ "fontSize": "0.8rem" }}
+               className="p-0 m-0 lh-0 pb-1 fst-italic"
+             >
+                <DateFormatter dateString={date} />
+                <Avatar name={author.name} />
+            </div>
+            <p>{excerpt}</p>
+          </div>
+        </Link>
+
+      </div>
+      {/** Add Cover Image Hero as background
       <div className={`${unna.className} ${styles.herocont}`}>
         <CoverImage title={title} src={coverImage} slug={slug} />
         <div className={`${styles.text}`}>
@@ -53,6 +76,7 @@ const HeroPost = ({
           <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>
+      **/}
     </>
   )
 }

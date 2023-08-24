@@ -6,6 +6,7 @@ import Container from '@components/container'
 import MoreStories from '@components/more-stories'
 import HeroPost from '@components/hero-post'
 import Layout from '@components/layout'
+import Footer from '@components/footer'
 
 import { getAllPosts } from '@lib/api'
 import Post from '@interfaces/post'
@@ -29,9 +30,15 @@ export default function Index({ allPosts }: Props) {
     <>
         <Head>
           <title>{`Blog`}</title>
+          <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
         </Head>
         <div className="d-flex justify-content-center mb-4">
-          <a href="/blog" className={`${unna.className} fw-bold fs-2 navbar-brand`}>Blog.</a>
+          <a
+            href="/blog"
+            className={`${unna.className} text-decoration-underline fw-bold fs-2 navbar-brand`}
+          >
+            Blog.
+          </a>
         </div>
         <div className="">
           <Image
@@ -65,6 +72,7 @@ export default function Index({ allPosts }: Props) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </div>
         </div>
+        <Footer />
     </>
   )
 }

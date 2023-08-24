@@ -24,6 +24,7 @@ export default function Home() {
     <>
       <Head>
         <title>{`Landing Page`}</title>
+        <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>

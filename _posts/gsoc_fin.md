@@ -1,19 +1,148 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: 'http://localhost:3000/website/assets/blog/gsoc_fin/cover.png'
-date: '2023-08-12T15:21:32.163Z'
+title: 'Google Summer of Code 2023: Matplotlib'
+subtitle: 'Google Summer of Code 2023: Final Report'
+excerpt: 'This project focuses on improving mathtext by examining the
+          known/reported issues within the existing framework, expanding
+          support for new Math-LaTeX-based features, and incorporating
+          robust testing to track down unobserved issues.' 
+coverImage: '/assets/blog/gsoc_fin/cover.png'
+date: '2023-08-24T12:35:23.768Z' 
 author:
   name: Ratnabali Dutta
   picture: '/assets/blog/authors/myAvatar.png'
 ogImage:
-  url: 'http://localhost:3000/website/assets/blog/gsoc_fin/cover.png'
+  url: '/assets/blog/gsoc_fin/cover.png'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+This project focuses on improving mathtext by examining the known/reported
+issues within the existing framework, expanding support for new Math-LaTeX-based
+features, and incorporating robust testing to track down unobserved issues. The
+overarching goal of this project was to improve the functionality and usability
+of mathtext for a wide spectrum of use cases.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+### Mentors:
 
-## Lorem Ipsum
+* Kyle Sunden <a href="https://github.com/ksunden" target="_blank" style="color: #E85A4F">@ksunden</a>
+* Elliott Sales de Andrade <a href="https://github.com/QuLogic" target="_blank" style="color: #E85A4F">@QuLogic</a>
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+
+### Improvements to MathTeXt support:
+
+Mathtext is a module utilizing a subset of LaTeX functionalities that enables
+mathematical symbols, math fonts, and font encodings to fine-tune the usability
+of math texts inside a data plot. This project fixed existing bugs from the
+GitHub issue tracker and added some needed font features like bold italics into
+the mathtext module. Below we discuss some of the changes added to the
+matplotlib and their respective pull requests (PRs) to get an overview of the
+project outcomes.
+
+### Current state: The things that were added 
+
+Some of the **New Features** added: 
+
+* **Bold**-_Italic_ fonts
+
+  <div>Issue: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/issues/19393">
+    https://github.com/matplotlib/matplotlib/issues/19393</a></div>
+  <div>PR: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/pull/25359">
+    https://github.com/matplotlib/matplotlib/pull/25359</a></div>
+  <br />
+  
+  Mathtext provides the `\mathbf` and `\mathit` commands to format texts or
+  glyphs typed in math mode into bold and italic subsequently. Occasionally, we
+  require changing typefaces to emphasize certain symbols to be consistent with
+  the rest of the document where the plot is added. However, nesting the commands
+  for bold and italics doesn’t work as intuitively as LaTeX prioritizes the
+  innermost command and makes using nested commands illegal in math mode.
+  The LaTeX extension package, `amsmath`, provides the command, `\mathbfit`, to
+  achieve bold italic glyphs. This PR adds the support for the `\mathbfit` command
+  needed to get bold italics in matplotlib.
+
+* _**Boldsymbol**_
+
+  <div>Issue: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/issues/1366">
+    https://github.com/matplotlib/matplotlib/issues/1366</a></div>
+  <div>PR: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/pull/25661">
+    https://github.com/matplotlib/matplotlib/pull/25661</a></div>
+  <br />
+
+  The `\boldsymbol` command allows the users to apply boldface to nearly any
+  symbols. The command, however comes with some confusingly interrelated parts,
+  like Latin alphabets and lowercase Greek alphabets use the bold and
+  italicized versions, unlike digits, uppercase Greek alphabets, and other
+  glyphs which derive the upright bold version from the selected font
+  wherever applicable.
+
+* Substack
+
+  <div>Issue: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/issues/14247">
+    https://github.com/matplotlib/matplotlib/issues/14247</a></div>
+  <div>PR: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/pull/26151">
+    https://github.com/matplotlib/matplotlib/pull/26151</a></div>
+  <br />
+
+  The `\substack` command is also provided by the `amsmath` LaTeX extension
+  package, to produce multiline subscripts or superscripts. Implementing this
+  feature turned out to be challenging because of syntax discrepancies. In LaTeX,
+  the `\\` is utilized as the next-line command, which is essential to provide a
+  multiline subformula. However, when parsing the `\\` symbol, `Python` views it
+  as an escape character. Hence, maintaining consistency with the LaTeX command
+  syntax proved to be trickier. To address this incompatibility, we used
+  [Pyparsing’s](https://pyparsing-docs.readthedocs.io/en/latest/pyparsing.html)
+  `nested_expr` feature.
+
+* Middle | Delimiters
+
+  <div>Issue: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/issues/23212">
+    https://github.com/matplotlib/matplotlib/issues/23212</a></div>
+  <div>PR: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/pull/26333">
+    https://github.com/matplotlib/matplotlib/pull/26333</a></div>
+  <br />
+
+  Delimiters used in formulas should be big enough to fit the equation it wraps.
+  Mathtext offers `\left` and `\right` delimiters to obtain such stretchable
+  delimiters. To maintain the aesthetic feel of the equation, LaTeX uses middle
+  delimiters resizes according to the equation. The `\middle` command is used
+  with strictly with the `\left` and `\right` commands.
+
+### Future work: The things that are left to do 
+
+Integrating a subset of LaTeX functionalities into mathtext requires a
+detail-attentive eye, which sometimes becomes challenging due to a load of
+subtleties. Mathtext still requires a lot of improvements, however, a few among
+many long-term enhancements that would be beneficial are:
+
+* Integrating mathtext to use Latin Modern Fonts since LM fonts use Unicode
+  codepoints and provides a more comprehensive list of glyphs required in
+  mathematical typesetting.
+* Refining the baseline, and alignment:
+    * Better positioning of math formulas in generalized fractions, subscripts,
+      and superscripts.
+    * Better conversion for Vector and Raster output.
+
+### Link(s) to code(s): 
+
+- The list of my contributions to Mathtext: pull requests that got
+  <a href="https://github.com/matplotlib/matplotlib/pulls?q=is%3Apr+author%3AdevRD+is%3Aclosed" target="_blank" style="color: #E85A4F">merged</a>.
+
+- A list of 
+  <a href="https://github.com/matplotlib/matplotlib/pulls/devRD" target="_blank" style="color: #E85A4F">open or draft</a>
+pull requests that are scheduled long-term or currently work in progress.
+
+- A list of
+  <a href="https://github.com/matplotlib/matplotlib/issues?page=1&q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+text%2Fmathtext%22" target="_blank" style="color: #E85A4F">reported issues</a>
+  for Mathtext in the GitHub repository that include stylistic modification,
+  feature requests, and performance improvements.
+
+- Multiple new features were incorporated into the mathtext module in the new
+  release of Matplotlib _(v3.8.0)_. The list of features can be found in the
+  <a href="https://matplotlib.org/devdocs/users/next_whats_new.html" target="_blank" style="color: #E85A4F">devdocs</a>
+  link currently.
+
+**Note: Weekly Progress and meeting updates can be found in this doc:** <a href="https://hackmd.io/@matplotlib/Sk0Uo0NP3" target="_blank" style="color: #E85A4F; font-weight: bold">Hackmd</a> 
+
+### Miscellaneous links and references
+
+- Project <a href="https://matplotlib.org/stable/tutorials/text/mathtext.html" target="_blank" style="color: #E85A4F">Documentation</a>
+- AMS-LaTeX <a href="http://www.ams.org/arc/tex/amsmath/amsldoc.pdf" target="_blank" style="color: #E85A4F">Documentation</a>
+- The Latin Modern Fonts <a href="https://www.gust.org.pl/projects/e-foundry/latin-modern" target="_blank" style="color: #E85A4F">Project</a>
