@@ -21,7 +21,7 @@ expressions and keep user-friendliness in mind, primarily combining the
 simplest of formulas to build a more intricate one. We will discuss how
 LaTeX typesets math formulas and mathematical fonts. 
 
-Unlike my inability to tap into proper moods at the right time, TeX can tap
+TeX can tap
 into 6 modes – the Vertical Mode, Internal Vertical Mode, Horizontal Mode,
 Restricted Horizontal Mode, Math Mode, and Display Math Mode – to help prepare
 the document you want.
