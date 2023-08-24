@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
 
- // Add basePath
+ // Add basePath for local setting
   basePath: '/website',
   images: {
     domains: ['localhost'],
