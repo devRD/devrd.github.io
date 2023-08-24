@@ -16,10 +16,10 @@ const PostBody = ({ content }: Props) => {
       components={{
         img: (props) => (
           <Image
-            src={props.src!}
-            alt={props.alt!}
-            width={props.width!}
-            height={props.height!}
+            src={props.src}
+            alt={props.alt}
+            width={props.width}
+            height={props.height}
             className="p-2 position-relative"
           />
         ),
