@@ -2,13 +2,13 @@
 title: '[Math]ematical Typefaces in (La)TeX[t]'
 subtitle: 'LaTeX: Yes, the one used in _typesetting_ [Part - II]'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/latex_2/cover.png'
+coverImage: '/website/assets/blog/latex_2/cover.png'
 date: '2023-08-21T15:21:32.163Z'
 author:
   name: Ratnabali Dutta
-  picture: '/assets/blog/authors/myAvatar.png'
+  picture: '/website/assets/blog/authors/myAvatar.png'
 ogImage:
-  url: '/assets/blog/latex_2/cover.png'
+  url: '/website/assets/blog/latex_2/cover.png'
 ---
 
 ### Brief Introduction
