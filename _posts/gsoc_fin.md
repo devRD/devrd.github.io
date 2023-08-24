@@ -115,7 +115,14 @@ many long-term enhancements that would be beneficial are:
 * Integrating mathtext to use Latin Modern Fonts since LM fonts use Unicode
   codepoints and provides a more comprehensive list of glyphs required in
   mathematical typesetting.
+  <br/>
+  Draft PR: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/pull/26240">
+    https://github.com/matplotlib/matplotlib/pull/26240</a>
+
 * Refining the baseline, and alignment:
+  <br />
+  Draft PR: <a style="text-decoration: underline;" href="https://github.com/matplotlib/matplotlib/pull/26337">
+    https://github.com/matplotlib/matplotlib/pull/26337</a>
     * Better positioning of math formulas in generalized fractions, subscripts,
       and superscripts.
     * Better conversion for Vector and Raster output.
