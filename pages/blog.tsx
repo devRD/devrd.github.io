@@ -56,7 +56,7 @@ export default function Index({ allPosts }: Props) {
             height="200"
           />
         </div>
-        <div className="container">
+        <div className={`${unna.className} container`}>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -67,7 +67,7 @@ export default function Index({ allPosts }: Props) {
               excerpt={heroPost.excerpt}
             />
           )}
-          <div className="mt-3">
+          <div className={`${unna.className} mt-3`}>
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </div>
         </div>
