@@ -18,8 +18,8 @@ const PostBody = ({ content }: Props) => {
           <Image
             src={props.src!}
             alt={props.alt!}
-            width={props.width}
-            height={props.height}
+            width={props.width!}
+            height={props.height!}
             className="p-2 position-relative"
           />
         ),
