@@ -9,7 +9,7 @@ const Footer = () => {
       <hr style={{ "border": "0.5px solid #CCC"}}/>
       <footer className="d-flex flex-column align-items-center justify-content-center mb-4">
         <a href="/" className="d-flex justify-content-center">
-          <img src="/website/assets/logo.png" className="img-fluid w-25"/> 
+          <img src="/assets/logo.png" className="img-fluid w-25"/> 
         </a>
         <p className="mb-1">
           &copy; {d.getFullYear()} copyright &nbsp;
