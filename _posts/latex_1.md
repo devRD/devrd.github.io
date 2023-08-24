@@ -48,7 +48,7 @@ Open ‘(’, Close ‘)’, Punctuation, Inner (12), Over (a), Under (a), Accen
 Radical (√2), \Vcent (Vbox to be centered).
 
 <figure class="d-flex align-items-center justify-content-center flex-column w-100"> 
-  <img class="img-fluid" src="/website/assets/blog/latex_1/math_list.png" width="600" height="350" alt="math_list"/>
+  <img class="img-fluid" src="/website/assets/blog/latex_1/math_list.png" width=600 height=350 alt="math_list"/>
   <figcaption class="text-center figure-caption">Fig 1.0: Creation and conjoining of atoms</figcaption>
 </figure>
 
@@ -81,14 +81,14 @@ and bind everything together.
    lines, notably known as ‘\hrule’ or ‘\vrule’.
   </p>
   <figure class="d-flex justify-content-center align-items-center flex-column w-100"> 
-    <img class="p-0 m-0 img-fluid" src="/website/assets/blog/latex_1/baseline.png" width="150" height="200" alt="boxes"/>
+    <img class="p-0 m-0 img-fluid" src="/website/assets/blog/latex_1/baseline.png" width=150 height=200 alt="boxes"/>
     <figcaption class="text-center figure-caption">Fig 1.2: Box dimensions</figcaption>
   <figure>
 </div>
 
 <div class="d-flex mb-2 align-items-center">
   <figure>
-    <img src="/website/assets/blog/latex_1/baseline_eg.png" width="200" height="150" alt="baseline_example"/>
+    <img src="/website/assets/blog/latex_1/baseline_eg.png" width=200 height=150 alt="baseline_example"/>
     <figcaption class="text-center figure-caption">Fig 1.3: An example for baseline alignment with glyphs</figcaption>
   </figure>
   <p class="ms-2">
@@ -105,7 +105,7 @@ and bind everything together.
 
 
 <figure class="d-flex justify-content-center align-items-center flex-column w-100"> 
-  <img className="img-fluid" src="/website/assets/blog/latex_1/boxes.png" width="450" height="150" alt="dummy boxes"/>
+  <img className="img-fluid" src="/website/assets/blog/latex_1/boxes.png" width=450 height=150 alt="dummy boxes"/>
   <figcaption class="text-center figure-caption">Fig 1.4: Dummy text viewed as LaTeX's amalgamation of horizontal and vertical boxes</figcaption>
 </figure>
 
