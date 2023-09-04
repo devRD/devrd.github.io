@@ -14,11 +14,15 @@ ogImage:
   url: '/assets/blog/gsoc_fin/cover.png'
 ---
 
-This project focuses on improving mathtext by examining the known/reported
-issues within the existing framework, expanding support for new Math-LaTeX-based
-features, and incorporating robust testing to track down unobserved issues. The
+This project focuses on improving the mathematical text support in the Matplotlib
+library, which is popularly used for data visualization in multiple academic and
+industrial projects. Matplotlib supports mathematical typesetting through the
+mathtext module. The mathtext module is derived from LaTeX and is one of the
+most popular typesetting tools today.  We examined the known/reported issues
+within the existing framework and expanded support for new Math-LaTeX-based
+features. We also tested and triaged new issues in the mathtext module. The
 overarching goal of this project was to improve the functionality and usability
-of mathtext for a wide spectrum of use cases.
+of mathext for a wide spectrum of use cases.
 
 ### Mentors:
 
@@ -28,7 +32,8 @@ of mathtext for a wide spectrum of use cases.
 
 ### Improvements to MathTeXt support:
 
-Mathtext is a module utilizing a subset of LaTeX functionalities that enables
+Matplotlib’s mathtext is a powerful tool for including mathematical expressions
+in your plots. The module utilizing a subset of LaTeX functionalities that enables
 mathematical symbols, math fonts, and font encodings to fine-tune the usability
 of math texts inside a data plot. This project fixed existing bugs from the
 GitHub issue tracker and added some needed font features like bold italics into
