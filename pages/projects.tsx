@@ -7,6 +7,7 @@ import Footer from '@components/footer'
 
 import { web, text, art } from '@lib/projects'
 import styles from '@styles/project.module.css'
+import { PATH_CONFIG } from '../config'
 
 const unna = Unna({
   subsets: [],
