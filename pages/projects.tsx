@@ -23,7 +23,7 @@ export default function Projects() {
       <ProjectHeader />
       <div className={`container ${unna.className} mt-3 mb-3`}>
         <div className={`mb-4 d-flex justify-content-center align-items-center flex-column ${styles.top}`}>
-          <img src={`http://localhost:3000/website/assets/projects/portfolio.svg`} className="w-50"/>
+          <img src={`${PATH_CONFIG}/assets/projects/portfolio.svg`} className="w-50"/>
           <p className="fs-4 m-0 p-0 lh-0">
             {`Explore projects ranging from web design, graphics, and development`}
           </p>
