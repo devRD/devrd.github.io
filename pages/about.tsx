@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Waterfall, Unna } from 'next/font/google'
 
 import styles from '@styles/about.module.css'
+import ProjectHeader from '@components/project-header'
 
 const unna = Unna({
   subsets: [],
@@ -16,6 +17,7 @@ export default function About() {
       <Head>
         <title>{`About Me`}</title>
       </Head>
+      <ProjectHeader />
       <div className={`${styles.about} ${unna.className}`}>
         <div className="container">
           <div className="d-flex">

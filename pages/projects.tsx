@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Waterfall, Unna } from 'next/font/google'
 
-import ProjectHeader from '@components/projectheader'
+import ProjectHeader from '@components/project-header'
+import Footer from '@components/footer'
+
 import { web, text, art } from '@lib/projects'
 import styles from '@styles/project.module.css'
 
@@ -18,6 +20,7 @@ export default function Projects() {
       <Head>
         <title>{`Projects`}</title>
       </Head>
+      <ProjectHeader />
       <div className={`container ${unna.className} mt-3 mb-3`}>
         <div className={`mb-4 d-flex justify-content-center align-items-center flex-column ${styles.top}`}>
           <img src={`http://localhost:3000/website/assets/projects/portfolio.svg`} className="w-50"/>
@@ -25,7 +28,6 @@ export default function Projects() {
             {`Explore projects ranging from web design, graphics, and development`}
           </p>
         </div>
-        <ProjectHeader />
         {/** Textual Projects Section **/}
         <div className="row mt-4">
           <div className={`mb-3 ${styles.web}`}>
@@ -138,6 +140,7 @@ export default function Projects() {
           })}
         </div>
       </div>
+      <Footer />
     </>
   )
 }

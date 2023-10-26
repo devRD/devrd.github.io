@@ -108,8 +108,8 @@ body {
     rgb(var(--background-start-rgb))
     no-repeat;
   **/
-    background: var(--bg-dark);
-    /* background: var(--about-bg); */
+    /* background: var(--bg-dark); */
+    background: var(--about-bg);
     height: 100vh;
     overflow-x: hidden;
 }

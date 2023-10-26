@@ -1,9 +1,6 @@
+
 .top {
   color: var(--primary-turq);
-}
-
-.top p:nth-child(2){
-  color: var(--secondary-turq);
 }
 
 .wrap {
@@ -53,7 +50,6 @@ a.link:hover > div.imgOverlay > .under {
 
 a.link:hover > div.imgOverlay > .explore {
   color: var(--primary-turq);
-  text-shadow: 1px 1px 2px black;
   transition: color, text-shadow 1s ease;
 }
 
@@ -63,7 +59,7 @@ a.link:hover > div.imgOverlay > .explore {
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  color: var(--primary-red);
+  color: var(--bg-dark);
   font-weight: bold;
   /*font-family: futureaheavy;*/
   font-size: 200%;
@@ -72,8 +68,9 @@ a.link:hover > div.imgOverlay > .explore {
   top: 25%;
   left: -1%;
   word-wrap: break-word;
-  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
   width: 60%;
+  text-shadow: 1px 1px 2px var(--about-bg);
 }
 
 .list {
@@ -83,7 +80,7 @@ a.link:hover > div.imgOverlay > .explore {
   padding: 0;
   text-transform: uppercase;
   text-shadow: none;
-  color: var(--about-creme);
+  color: var(--primary-red);
 }
 
 .imgOverlay {
@@ -96,7 +93,7 @@ a.link:hover > div.imgOverlay > .explore {
   position: relative;
   right: -6rem;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 4px;
   height: 330px;
   max-height: 100%;
@@ -104,9 +101,24 @@ a.link:hover > div.imgOverlay > .explore {
 }
 
 .web p, .web hr {
-  color: var(--about-creme);
+  color: var(--secondary-red);
+  font-weight: bold;
   opacity: 1;
   border-color: var(--about-creme);
+}
+
+.mainLogo {
+  width: 20%;
+}
+
+.navl{
+  color: var(--primary-red);
+  border: 1px solid transparent;
+}
+
+.navl:hover {
+  color: black;
+  border: 1px solid black;
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
@@ -136,3 +148,4 @@ a.link:hover > div.imgOverlay > .explore {
     max-height: 100%;
   }  
 }
+

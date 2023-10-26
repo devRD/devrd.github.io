@@ -6,6 +6,7 @@ import Container from '@components/container'
 import MoreStories from '@components/more-stories'
 import HeroPost from '@components/hero-post'
 import Layout from '@components/layout'
+import ProjectHeader from '@components/project-header'
 import Footer from '@components/footer'
 
 import { getAllPosts } from '@lib/api'
@@ -32,6 +33,7 @@ export default function Index({ allPosts }: Props) {
           <title>{`Blog`}</title>
           <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
         </Head>
+        <ProjectHeader />
         <div className="d-flex justify-content-center mb-4">
           <a
             href="/blog"
