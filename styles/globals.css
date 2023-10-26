@@ -42,11 +42,14 @@
   --card-border-rgb: 131, 134, 135;
 
   /** About Page Theme Variables **/
-  --about-bg: #EAE7DC;
+  --about-bg: #EAE7D0;
   --about-creme: #D8C3A5;
-  --about-grey: #8E8D8A;
-  --about-peach: #E98074;
-  --about-red: #E85A4F;
+  --brownyn: #C7A685;
+  --primary-turq: #218288;
+  --secondary-turq: #C1DBD0;
+  --primary-red: #FF6634;
+  --secondary-red: #FF855D;
+  --bg-dark: #212529;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -105,7 +108,8 @@ body {
     rgb(var(--background-start-rgb))
     no-repeat;
   **/
-    background: var(--about-bg);
+    background: var(--bg-dark);
+    /* background: var(--about-bg); */
     height: 100vh;
     overflow-x: hidden;
 }

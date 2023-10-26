@@ -1,0 +1,138 @@
+.top {
+  color: var(--primary-turq);
+}
+
+.top p:nth-child(2){
+  color: var(--secondary-turq);
+}
+
+.wrap {
+  background: transparent;
+}
+
+a.link {
+  position: relative;
+  margin-bottom: 1rem;
+  background: transparent;
+  border: none;
+}
+a.link {
+  transition: transform 0.5s;
+}
+
+a.link:hover {
+  transform: scale(0.95);
+}
+
+.explore {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 10px;
+  padding: 5px 10px;
+  align-items: center;
+  font-size: 100%;
+  color: var(--brownyn);
+  padding-bottom: 10px;
+}
+
+.under {
+  z-index: 10000;
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+  display: none;
+}
+
+a.link:hover > div.imgOverlay > .under {
+  border: 1px solid var(--primary-turq);
+  display: block;
+  transition: border 1s, display 5s ease;
+}
+
+a.link:hover > div.imgOverlay > .explore {
+  color: var(--primary-turq);
+  text-shadow: 1px 1px 2px black;
+  transition: color, text-shadow 1s ease;
+}
+
+/* title text formatting */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  color: var(--primary-red);
+  font-weight: bold;
+  /*font-family: futureaheavy;*/
+  font-size: 200%;
+  line-height: 100%;
+  position: absolute;
+  top: 25%;
+  left: -1%;
+  word-wrap: break-word;
+  text-shadow: 1px 1px 2px black;
+  width: 60%;
+}
+
+.list {
+  list-style: none;
+  font-size: 50%;
+  display: block;
+  padding: 0;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: var(--about-creme);
+}
+
+.imgOverlay {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  position: relative;
+  right: -6rem;
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 4px;
+  height: 330px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.web p, .web hr {
+  color: var(--about-creme);
+  opacity: 1;
+  border-color: var(--about-creme);
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .project {
+    font-size: 150%;
+    top: 0px;
+  }
+
+  .image {
+    height: 210px;
+    max-height: 100%;
+  }  
+  
+}
+
+@media all and (max-width: 480px) {
+  .image {
+    height: 280px;
+    max-height: 100%;
+  }  
+}

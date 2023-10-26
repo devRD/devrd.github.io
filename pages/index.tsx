@@ -27,6 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
       </Head>
       <main className={styles.main}>
+       {/*
         <div className={styles.description}>
           <a href="/">
             <div
@@ -36,11 +37,8 @@ export default function Home() {
              </div>
           </a>
         </div>
-
-        <div className={styles.center}>
-        </div>
-
-        <div className={styles.grid}>
+        */}
+        <div className={`${styles.grid}`}>
           <Link
             href="/about"
             className={styles.card}
@@ -60,6 +58,16 @@ export default function Home() {
             </h2>
             <p>What do I do?</p>
           </Link>
+          <Link
+            href="/projects"
+            className={styles.card}
+          >
+            <h2 className={unna.className}>
+              Portfolio <span>&rarr;</span>
+            </h2>
+            <p>Explore projects</p>
+          </Link>
+          {/*
           <Image
             alt="landing_flower"
             className={`d-block d-sm-none position-absolute img-fluid ${styles.mobileflow}`}
@@ -81,6 +89,7 @@ export default function Home() {
             width="150"
             height="150"
           />
+          */}
         </div>
       </main>
     </>
